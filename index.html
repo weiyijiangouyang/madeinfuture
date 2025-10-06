@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,9 +28,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+    body { font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    .logo { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
   </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
@@ -38,7 +41,7 @@
   <header class="sticky top-0 z-50 backdrop-blur bg-black/60 border-b border-electrode/20">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2">
-        <div class="text-xl tracking-tight select-none">
+        <div class="text-xl tracking-tight select-none logo">
           <span>=MadeIn(</span><span class="text-electrode">"Future"</span><span>)</span>
         </div>
       </a>
@@ -107,22 +110,36 @@
     <div class="grid md:grid-cols-4 gap-6">
       <!-- Simple cards (icons replaced with clean circles to keep it zero-dep) -->
       <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
-        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-[#00AEEF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+  <circle cx="9" cy="7" r="4"/>
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+</svg>
         <h3 class="text-xl font-semibold mb-2">E-commerce Operators</h3>
         <p class="text-gray-400 text-sm">Scaled brands into category leaders</p>
       </div>
       <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
-        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-[#00AEEF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <rect x="4" y="4" width="16" height="16" rx="2"/>
+  <rect x="9" y="9" width="6" height="6"/>
+  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+</svg>
         <h3 class="text-xl font-semibold mb-2">E-commerce AI Experts</h3>
         <p class="text-gray-400 text-sm">Hundreds of automations across ops</p>
       </div>
       <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
-        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-[#00AEEF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <path d="M16 18l6-6-6-6"/>
+  <path d="M8 6l-6 6 6 6"/>
+</svg>
         <h3 class="text-xl font-semibold mb-2">AI Engineers</h3>
         <p class="text-gray-400 text-sm">Integrations, workflows, agentic systems</p>
       </div>
       <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
-        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-[#00AEEF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+</svg>
         <h3 class="text-xl font-semibold mb-2">Security & Compliance</h3>
         <p class="text-gray-400 text-sm">GDPR, PCI DSS, SOC2</p>
       </div>
@@ -230,7 +247,7 @@
     <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8 text-sm text-gray-300">
       <div>
         <div class="flex items-center gap-3 mb-3">
-          <div class="text-xl tracking-tight select-none">
+          <div class="text-xl tracking-tight select-none logo">
             <span>=MadeIn(</span><span class="text-electrode">"Future"</span><span>)</span>
           </div>
         </div>
