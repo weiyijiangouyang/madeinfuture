@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Made in Future</title>
+  <meta name="description" content="AI automation lab for scaled e-commerce operators." />
+
+  <!-- Tailwind (CDN build, zero setup) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { electrode: "#00AEEF" },
+          animation: {
+            "spin-slow": "spin 6s linear infinite",
+            "spin-slower": "spin 12s linear infinite",
+            "spin-slowest": "spin 24s linear infinite",
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-black/60 border-b border-electrode/20">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="text-xl tracking-tight select-none">
+          <span>=MadeIn(</span><span class="text-electrode">"Future"</span><span>)</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#story" class="hover:text-white transition-colors">Our Story</a>
+        <a href="#team" class="hover:text-white transition-colors">Our Team</a>
+        <a href="#pain-medicine" class="hover:text-white transition-colors">Our Solution</a>
+        <a href="#how-we-work" class="hover:text-white transition-colors">How We Work</a>
+        <a href="#past-work" class="hover:text-white transition-colors">Past Work</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Qp_L84YayYQXlpkMWcyvPrR7-vBuSwTjGX-oioGIuPM-HU50GWMJ9II7Zblk4E0pQnvJekfJG" target="_blank" rel="noopener" class="bg-electrode text-black font-bold px-4 py-2 rounded-xl shadow transition-colors hover:bg-white hover:text-electrode">Book Audit</a>
+      </nav>
+      <button id="burger" class="md:hidden p-2 rounded-lg border border-electrode/30" aria-label="Toggle menu">
+        <!-- simple burger icon -->
+        <div class="w-5 h-0.5 bg-white mb-1"></div>
+        <div class="w-5 h-0.5 bg-white mb-1"></div>
+        <div class="w-5 h-0.5 bg-white"></div>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-electrode/20 bg-black/90">
+      <div class="px-6 py-4 flex flex-col gap-4 text-gray-300">
+        <a href="#story"   class="py-2">Our Story</a>
+        <a href="#team"    class="py-2">Our Team</a>
+        <a href="#pain-medicine" class="py-2">Our Solution</a>
+        <a href="#how-we-work"   class="py-2">How We Work</a>
+        <a href="#past-work"     class="py-2">Past Work</a>
+        <a href="#contact"       class="py-2">Contact</a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Qp_L84YayYQXlpkMWcyvPrR7-vBuSwTjGX-oioGIuPM-HU50GWMJ9II7Zblk4E0pQnvJekfJG" target="_blank" rel="noopener" class="bg-electrode text-black font-bold w-full text-center px-4 py-2 rounded-xl transition-colors hover:bg-white hover:text-electrode">Book Audit</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative flex flex-col md:flex-row items-center justify-between px-10 md:px-20 py-28">
+    <div class="absolute inset-0 -z-10 opacity-20 animate-pulse bg-gradient-to-br from-electrode/40 via-electrode/10 to-transparent"></div>
+    <div class="text-left md:w-1/2 z-10">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight bg-gradient-to-r from-electrode to-[#0092C9] bg-clip-text text-transparent">
+        We transform your e-commerce operation with AI workers that never sleep
+      </h1>
+      <p class="text-lg md:text-2xl text-gray-300 max-w-xl mb-10 leading-relaxed">
+        Cut costs, eliminate bottlenecks, and unlock growth with always-on AI teammates built directly into your operations.
+      </p>
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Qp_L84YayYQXlpkMWcyvPrR7-vBuSwTjGX-oioGIuPM-HU50GWMJ9II7Zblk4E0pQnvJekfJG" target="_blank" rel="noopener" class="inline-block bg-electrode text-black font-bold px-8 py-4 rounded-2xl shadow-xl transition-colors hover:bg-white hover:text-electrode">Book Your Free AI Audit</a>
+    </div>
+    <div class="hidden md:flex md:w-1/2 justify-center">
+      <div class="relative w-80 h-80 rounded-full">
+        <div class="absolute inset-0 rounded-full border-4 border-electrode/30 animate-spin-slow"></div>
+        <div class="absolute inset-6 rounded-full border-4 border-electrode/40 animate-spin-slower"></div>
+        <div class="absolute inset-12 rounded-full border-4 border-electrode/60 animate-spin-slowest"></div>
+        <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle at center, rgba(0,174,239,0.15), transparent 60%);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="px-10 md:px-20 py-20">
+    <h2 class="text-4xl font-bold mb-10 text-electrode text-center">Our Story</h2>
+    <p class="text-gray-300 max-w-4xl mx-auto leading-relaxed text-lg text-center">
+      We are former e-commerce operators who started where you are — bottlenecks, repetitive tasks, and scale friction. We built AI automations out of necessity, then battle-tested them across brands. Now, we embed that lab inside your company to turn busy-work into growth.
+    </p>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="px-10 md:px-20 py-20 bg-gray-950/70">
+    <h2 class="text-4xl font-bold mb-10 text-electrode text-center">Our Team</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <!-- Simple cards (icons replaced with clean circles to keep it zero-dep) -->
+      <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
+        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <h3 class="text-xl font-semibold mb-2">E-commerce Operators</h3>
+        <p class="text-gray-400 text-sm">Scaled brands into category leaders</p>
+      </div>
+      <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
+        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <h3 class="text-xl font-semibold mb-2">E-commerce AI Experts</h3>
+        <p class="text-gray-400 text-sm">Hundreds of automations across ops</p>
+      </div>
+      <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
+        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <h3 class="text-xl font-semibold mb-2">AI Engineers</h3>
+        <p class="text-gray-400 text-sm">Integrations, workflows, agentic systems</p>
+      </div>
+      <div class="bg-black border border-electrode/30 rounded-2xl p-6 text-center">
+        <div class="w-10 h-10 rounded-full bg-electrode/30 mx-auto mb-4"></div>
+        <h3 class="text-xl font-semibold mb-2">Security & Compliance</h3>
+        <p class="text-gray-400 text-sm">GDPR, PCI DSS, SOC2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN & MEDICINE -->
+  <section id="pain-medicine" class="px-10 md:px-20 py-20 bg-gray-900 rounded-t-[4rem] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at center, rgba(0,174,239,0.6), transparent 60%);"></div>
+    <h2 class="text-4xl font-bold mb-6 text-center text-electrode">Your Pain & Our Medicine</h2>
+    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12">
+      We understand e-commerce operators’ pains — from repetitive tasks to scaling struggles. Our approach addresses them head-on with automations that unlock growth.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-12 relative z-10">
+      <div class="bg-black border border-electrode/30 rounded-2xl p-8 relative overflow-hidden">
+        <span class="absolute text-7xl font-extrabold text-white/10 right-4 top-4">1</span>
+        <h3 class="text-2xl font-bold mb-4 text-electrode">
+          <span class="bg-gradient-to-r from-electrode to-[#0092C9] bg-clip-text text-transparent">What</span> can I automate in my e-commerce?
+        </h3>
+        <p class="text-white mb-6">You don’t know which areas of your operations are the best candidates for AI.</p>
+        <h4 class="text-xl font-bold mb-2 text-electrode">Our Medicine</h4>
+        <p class="text-white font-medium">We run a full AI audit across your workflows to surface high-impact opportunities.</p>
+      </div>
+
+      <div class="bg-black border border-electrode/30 rounded-2xl p-8 relative overflow-hidden">
+        <span class="absolute text-7xl font-extrabold text-white/10 right-4 top-4">2</span>
+        <h3 class="text-2xl font-bold mb-4 text-electrode">
+          <span class="bg-gradient-to-r from-electrode to-[#0092C9] bg-clip-text text-transparent">How</span> do I integrate the automations?
+        </h3>
+        <p class="text-white mb-6">You spot opportunities but lack expertise to connect tools, ensure adoption, and measure ROI.</p>
+        <h4 class="text-xl font-bold mb-2 text-electrode">Our Medicine</h4>
+        <p class="text-white font-medium">We implement fully agentic AI systems — autonomous, private, and ROI-driven.</p>
+      </div>
+    </div>
+
+    <p class="text-center text-gray-300 mt-10">We embed as your e-commerce Chief AI Officer: cut costs, kill bottlenecks, grow revenue. 3–5 automations live in 90 days with measurable impact.</p>
+  </section>
+
+  <!-- 90-DAY GUARANTEE -->
+  <section class="px-10 md:px-20 py-20">
+    <h2 class="text-4xl font-bold mb-8 text-electrode text-center">90-Day Guarantee</h2>
+    <ul class="text-gray-300 list-disc list-inside space-y-4 max-w-3xl mx-auto text-lg">
+      <li>3–5 live, cutting-edge e-commerce best-practice automations in your stack</li>
+      <li>30–40% measurable KPI improvements</li>
+      <li>Teams adopting AI into daily workflows</li>
+    </ul>
+    <p class="mt-8 text-xl font-semibold text-electrode text-center">If you don’t see ROI in 90 days, we keep working for free until you do.</p>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="how-we-work" class="px-10 md:px-20 py-20 bg-gray-950/70">
+    <h2 class="text-4xl font-bold mb-10 text-electrode text-center">How We Work</h2>
+    <div class="relative max-w-5xl mx-auto">
+      <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-electrode/30"></div>
+
+      <!-- Timeline steps (7) -->
+      <div id="hww-steps" class="space-y-6"></div>
+    </div>
+  </section>
+
+  <!-- PAST WORK -->
+  <section id="past-work" class="px-10 md:px-20 py-20 bg-gray-900 rounded-3xl">
+    <h2 class="text-4xl font-bold mb-8 text-electrode text-center">Our Past Work</h2>
+    <div id="pw-accordion" class="space-y-4"></div>
+  </section>
+
+  <!-- WHY DIFFERENT -->
+  <section id="why-different" class="px-10 md:px-20 py-20">
+    <h2 class="text-4xl font-bold mb-10 text-electrode text-center">Why We’re Different</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-black border border-electrode/20 rounded-2xl p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Full Stack</h3>
+        <p class="text-gray-400">We take you from discovery to KPI tracking with complete implementation and adoption.</p>
+      </div>
+      <div class="bg-black border border-electrode/20 rounded-2xl p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">E-commerce Native</h3>
+        <p class="text-gray-400">Operators at heart. We know your bottlenecks and what truly moves the needle.</p>
+      </div>
+      <div class="bg-black border border-electrode/20 rounded-2xl p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">ROI-Centered</h3>
+        <p class="text-gray-400">Every automation ties to measurable financial outcomes for your CMO/CFO.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST 90 DAYS -->
+  <section id="first-90" class="px-10 md:px-20 py-20 bg-gray-900 rounded-3xl">
+    <h2 class="text-4xl font-bold mb-10 text-electrode text-center">The First 90 Days</h2>
+    <div class="relative max-w-5xl mx-auto">
+      <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-electrode/30"></div>
+      <div id="f90" class="space-y-10"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-black/90 border-t border-electrode/20">
+    <div class="relative bg-gradient-to-r from-electrode to-[#006F9E] text-black text-center py-20 overflow-hidden">
+      <h2 class="text-4xl font-extrabold mb-4">Book your free AI audit today</h2>
+      <p class="mb-6 max-w-2xl mx-auto text-lg">We’ll audit your operation, surface automation opportunities, and show the ROI potential.</p>
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Qp_L84YayYQXlpkMWcyvPrR7-vBuSwTjGX-oioGIuPM-HU50GWMJ9II7Zblk4E0pQnvJekfJG" target="_blank" rel="noopener" class="inline-block bg-black text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition-colors hover:bg-[#0f0f10]">Book Your Free AI Audit</a>
+      <div class="absolute inset-0 -z-10" style="background: radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 70%);"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8 text-sm text-gray-300">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="text-xl tracking-tight select-none">
+            <span>=MadeIn(</span><span class="text-electrode">"Future"</span><span>)</span>
+          </div>
+        </div>
+        <p class="text-gray-400">AI automation lab for scaled e-commerce operators.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-center md:text-left">Company</h4>
+        <ul class="space-y-2 text-center md:text-left">
+          <li><a href="#story" class="hover:text-white">Our Story</a></li>
+          <li><a href="#team" class="hover:text-white">Our Team</a></li>
+          <li><a href="#why-different" class="hover:text-white">Why We’re Different</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-center md:text-left">Solutions</h4>
+        <ul class="space-y-2 text-center md:text-left">
+          <li><a href="#pain-medicine" class="hover:text-white">Our Solution</a></li>
+          <li><a href="#how-we-work" class="hover:text-white">How We Work</a></li>
+          <li><a href="#past-work" class="hover:text-white">Past Work</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-center md:text-left">Get Started</h4>
+        <ul class="space-y-2 text-center md:text-left">
+          <li><a href="#first-90" class="hover:text-white">First 90 Days</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-electrode/10">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
+        <span>© <span id="year"></span> Made in Future. All rights reserved.</span>
+        <div class="flex gap-4 mt-3 md:mt-0">
+          <a href="#" class="hover:text-gray-300">Privacy</a>
+          <a href="#" class="hover:text-gray-300">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
